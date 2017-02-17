@@ -1,0 +1,58 @@
+﻿<!doctype html>
+<html lang="en" ng-app="maApp">
+<head>
+    <meta charset="utf-8">
+    <title>Meal Advisr for {{firstName}}</title>
+    <base href="/" />
+    <style>
+        input.ng-dirty.ng-invalid {
+            background-color: lightpink;
+        }
+
+        input.ng-dirty.ng-valid {
+            background-color: lightgreen;
+        }
+
+    </style>
+    <link href="css/animate.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+
+</head>
+<body>
+
+    <ma-welcome-message time-period="time" time-format="'hh:mm:ss'"></ma-welcome-message>
+
+    <a href="#/restaurants">Restaurants</a> | 
+    <a href="#/demo">Demo</a> | 
+    <a href="#/reviews">Reviews</a>
+
+    <div class="fade-me" ng-view></div>
+
+
+
+    <script src="app/noAngularAtAll.js"></script>
+    <script src="js/angular.js"></script>
+    <script src="js/angular-animate.js"></script>
+    <script src="js/angular-route.js"></script>
+
+    <script src="app/app.js"></script>
+
+    <script src="app/restaurants/ma-module.js"></script>
+    <script src="app/reviews/ma-module.js"></script>
+    <script src="app/demo/ma-module.js"></script>
+    <script src="app/common/ma-module.js"></script>
+
+    <script src="app/restaurants/maRestaurantsFactory.js"></script>
+    <script src="app/restaurants/RestaurantsController.js"></script>
+    <script src="app/restaurants/RestaurantDetailController.js"></script>
+    <script src="app/restaurants/maRestaurantItem.js"></script>
+    <script src="app/restaurants/maRestaurantItemComponent.js"></script>
+    
+    <script src="app/reviews/ReviewsController.js"></script>
+    <script src="app/reviews/maReviewsService.js"></script>
+
+    <script src="app/demo/DemoController.js"></script>
+
+    <script src="app/common/maWelcomeMessage.js"></script>
+</body>
+</html>

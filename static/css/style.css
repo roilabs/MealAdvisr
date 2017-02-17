@@ -1,0 +1,3 @@
+.fade-me.ng-enter {
+    animation: flash 0.5s;
+}
